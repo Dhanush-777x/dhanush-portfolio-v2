@@ -1,0 +1,44 @@
+{
+  "name": "eric-portfolio-website",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.5.1",
+    "@fortawesome/free-brands-svg-icons": "^6.6.0",
+    "@fortawesome/free-solid-svg-icons": "^6.6.0",
+    "@fortawesome/react-fontawesome": "^0.2.2",
+    "@radix-ui/react-slot": "^1.0.2",
+    "@radix-ui/react-tooltip": "^1.0.7",
+    "@react-spring/web": "^9.7.4",
+    "@types/node": "20.11.19",
+    "@types/react": "18.2.55",
+    "@types/react-dom": "18.2.19",
+    "autoprefixer": "10.4.17",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.1.0",
+    "framer-motion": "^11.0.5",
+    "lucide-react": "^0.331.0",
+    "next": "14.1.0",
+    "postcss": "8.4.35",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-typewriter-effect": "^1.1.0",
+    "react-typing-effect": "^2.0.5",
+    "react-use": "^17.5.0",
+    "sharp": "^0.33.2",
+    "tailwind-merge": "^2.2.1",
+    "tailwindcss": "3.4.1",
+    "tailwindcss-animate": "^1.0.7",
+    "typescript": "5.3.3"
+  },
+  "devDependencies": {
+    "prettier": "3.2.5",
+    "prettier-plugin-tailwindcss": "^0.5.11"
+  }
+}
