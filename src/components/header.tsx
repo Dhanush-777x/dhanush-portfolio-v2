@@ -59,8 +59,8 @@ export default function Header() {
               download
               className="flex items-center cursor-pointer"
             >
+              <span className="mr-2 hidden md:inline">Resume</span>
               <FontAwesomeIcon icon={faDownload} className="text-lg pb-1" />
-              <span className="ml-2 hidden md:inline">Resume</span>
             </a>
           </div>
         </div>
