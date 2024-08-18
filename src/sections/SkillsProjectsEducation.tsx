@@ -34,6 +34,7 @@ import zshIcon from '@/assets/icons/zsh.png'
 import canvaIcon from "@/assets/icons/canva.png";
 import filmoraIcon from '@/assets/icons/filmora.png'
 import githubIcon from "@/assets/icons/github.png";
+import framerMotionIcon from '@/assets/icons/framer.svg'
 
 import ihasIcon from '../assets/projectImages/project-gif/ihas-logo.gif'
 import mob4uIcon from '../assets/projectImages/project-gif/mob-logo.gif'
@@ -49,12 +50,16 @@ import smartev from '../assets/projectImages/ev-project.jpg'
 import MotionCard from "@/components/motion-card";
 import MotionText from "@/components/motion-text";
 
+import { TimelineAnimation } from '../components/timeline-animation';
+
+
 type Skill = {
   name: string;
   icon: string;
 };
 
 type Experience = {
+  id: number;
   companyName: string;
   designation: string;
   duration: string;
@@ -74,6 +79,7 @@ type Project = {
 };
 
 type Education = {
+  id: number;
   universityName: string;
   study: string;
   marks: string;
@@ -95,7 +101,9 @@ export default function SkillsProjectsEducation() {
         { name: "CSS3", icon: css3Icon },
         { name: "Tailwind CSS", icon: tailwindcssIcon },
         { name: "Bootstrap", icon: bootstrapIcon },
-        { name: "Radix UI", icon: radixIcon }
+        { name: "Radix UI", icon: radixIcon },
+        { name: "Framer Motion", icon: framerMotionIcon },
+        { name: "Figma", icon: figmaIcon }
       ]
     },
     {
@@ -131,8 +139,7 @@ export default function SkillsProjectsEducation() {
         { name: "VS Code", icon: vscodeIcon },
         { name: "Brave", icon: BraveIcon },
         { name: "Alacritty", icon: alacrittyIcon },
-        { name: "Oh My Zsh", icon: zshIcon },
-        { name: "Figma", icon: figmaIcon }
+        { name: "Oh My Zsh", icon: zshIcon }
       ]
     },
     {
@@ -147,6 +154,7 @@ export default function SkillsProjectsEducation() {
 
   const experienceData: Experience[] = [
     {
+      id: 0,
       companyName: "Gorilla Technology",
       designation: "Summer Intern",
       duration: "May 2024 - Jul 2024",
@@ -154,6 +162,7 @@ export default function SkillsProjectsEducation() {
       skills: ["OpenWRT", "Node.js", "JWT", "Nginx"]
     },
     {
+      id: 1,
       companyName: "MATIC",
       designation: "Frontend Developer",
       duration: "Dec 2023 - Feb 2023",
@@ -161,6 +170,7 @@ export default function SkillsProjectsEducation() {
       skills: ["HTML5", "CSS3", "Javascript", "Bootstrap"]
     },
     {
+      id: 2,
       companyName: "Tata Communications Limited",
       designation: "Summer Intern",
       duration: "Jun 2023 - Jul 2023",
@@ -200,6 +210,16 @@ export default function SkillsProjectsEducation() {
       liveDemoUrl: "https://todoctivity.netlify.app/",
       githubUrl: "https://github.com/Dhanush-777x/todoctivity"
     },
+    {
+      projectName: "Smart EV Charging Station with ESP 32",
+      duration: "2023",
+      skills: ["esp32", "GSM Module", "Voltage Regulator", "Aurdino IDE"],
+      gif: smartevIcon,
+      image: smartev,
+      description: "Smart EV Charging Station with ESP32 is a cutting-edge project designed to revolutionize the electric vehicle(EV) charging experience. By leveraging the power of ESP32 microcontrollers and IoT technology.",
+      liveDemoUrl: "https://live-demo-link-b.com",
+      githubUrl: "https://github.com/user/project-b"
+    },
     // {
     //   projectName: "Mobile Suggestion System",
     //   duration: "2023",
@@ -210,21 +230,12 @@ export default function SkillsProjectsEducation() {
     //   liveDemoUrl: "https://live-demo-link-b.com",
     //   githubUrl: "https://github.com/user/project-b"
     // },
-    {
-      projectName: "Smart EV Charging Station with ESP 32",
-      duration: "2023",
-      skills: ["esp32", "GSM Module", "Voltage Regulator", "Aurdino IDE"],
-      gif: smartevIcon,
-      image: smartev,
-      description: "Smart EV Charging Station with ESP32 is a cutting-edge project designed to revolutionize the electric vehicle(EV) charging experience. By leveraging the power of ESP32 microcontrollers and IoT technology.",
-      liveDemoUrl: "https://live-demo-link-b.com",
-      githubUrl: "https://github.com/user/project-b"
-    }
   ];
   
 
   const educationData: Education[] = [
     {
+      id: 0,
       universityName: "Shiv Nadar University Chennai",
       study: "B.Tech in Computer Science (IoT)",
       marks: "8.67 CGPA",
@@ -232,6 +243,7 @@ export default function SkillsProjectsEducation() {
       duration: "2021 - Present"
     },
     {
+      id: 1,
       universityName: "Sri Vijay Vidyalaya Matriculation Higher Secondary School",
       study: "PCMB",
       marks: "92.6%",
@@ -239,6 +251,7 @@ export default function SkillsProjectsEducation() {
       duration: "2019 - 2021"
     },
     {
+      id: 2,
       universityName: "Sri Vijay Vidyalaya Matriculation Higher Secondary School",
       study: "HSC",
       marks: "96.2%",
@@ -326,7 +339,7 @@ export default function SkillsProjectsEducation() {
           <MotionDiv>
             <h2 className="mb-4">Projects</h2>
           </MotionDiv>
-          <div className="flex flex-wrap justify-center gap-6 lg:gap-2 xl:gap-10">
+          <div className="flex flex-wrap justify-center gap-6 lg:gap-2 xl:gap-10 bg-transparent backdrop-blur-lg">
             {projectsData.map((project, index) => (
               <MotionDiv key={index}>
                 <ProjectCard {...project} />
@@ -365,12 +378,10 @@ function SkillCard({ icon, name }: Skill) {
   );
 }
 
-function ExperienceCard({ companyName, designation, duration, city, skills }: Experience) {
+function ExperienceCard({ id, companyName, designation, duration, city, skills }: Experience) {
+  const totalDelay = id + id * 0.6
   return (
-    <div className="relative flex flex-col sm:flex-row items-start">
-      <div className="absolute left-0 top-0 bottom-0 w-1 bg-gray-300 sm:left-1"></div>
-      <div className="absolute -left-1 top-1/2 transform -translate-y-1/2 h-4 w-4 bg-black rounded-full border border-white sm:-left-0.5"></div>
-      <div className="ml-8 text-left bg-white border border-gray-200 rounded-xl shadow-lg w-80 sm:w-80 lg:w-[70vh] px-10 py-5 mb-10">
+    <TimelineAnimation delay={totalDelay}>
         <h3 className="text-lg font-semibold mb-2">
           <MotionText delayOffset={0.2}>{companyName}</MotionText>
         </h3>
@@ -388,29 +399,32 @@ function ExperienceCard({ companyName, designation, duration, city, skills }: Ex
         ))}
 
       </MotionList>
-      </div>
-    </div>
+    </TimelineAnimation>
   );
 }
 
 
-function EducationCard({ universityName, study, marks, place, duration }: Education) {
+
+
+function EducationCard({id, universityName, study, marks, place, duration }: Education) {
+  const totalDelay = id + id * 0.6
+
   return (
-    <div className="relative flex flex-col sm:flex-row items-start">
-      <div className="absolute left-0 top-0 bottom-0 w-1 bg-gray-300 sm:left-1"></div>
-      <div className="absolute -left-1 top-1/2 transform -translate-y-1/2 h-4 w-4 bg-black rounded-full border border-white sm:-left-0.5"></div>
-      <div className="ml-8 text-left bg-white border border-gray-200 rounded-xl shadow-lg w-80 sm:w-80 lg:w-[70vh] px-10 py-5 mb-10">
-        <h3 className="text-lg font-semibold mb-2">
-          <MotionText delayOffset={0.1}>{universityName}</MotionText>
-          </h3>
-        <p className="text-sm text-gray-500 mb-1">{study}</p>
-        <p className="text-sm text-gray-500 mb-1">{marks}</p>
-        <p className="text-sm text-gray-500 mb-1">{place}</p>
-        <p className="text-sm text-gray-500 mb-2">{duration}</p>
-      </div>
-    </div>
+    <TimelineAnimation delay={totalDelay}>
+      <h3 className="text-lg font-semibold mb-2">
+        <MotionText delayOffset={0.1}>{universityName}</MotionText>
+      </h3>
+      <p className="text-sm text-gray-500 mb-1">{study}</p>
+      <p className="text-sm text-gray-500 mb-1">{marks}</p>
+      <p className="text-sm text-gray-500 mb-1">{place}</p>
+      <p className="text-sm text-gray-500 mb-2">{duration}</p>
+    </TimelineAnimation>
   );
 }
+
+
+
+
 
 function ProjectCard({
   projectName,
@@ -423,7 +437,7 @@ function ProjectCard({
   githubUrl
 }: Project) {
   return (
-    <div className="bg-white group rounded-xl border-none p-5 text-left shadow-none transition-all duration-200 ease-linear drop-shadow-md hover:drop-shadow-xl w-full h-[620px] max-w-sm relative flex flex-col">
+    <div className="bg-white backdrop-blur-lg group rounded-xl border-none p-5 text-left shadow-none transition-all duration-200 ease-linear drop-shadow-md hover:drop-shadow-2xl w-full h-[620px] max-w-sm relative flex flex-col">
       <div className="flex items-start mb-4 flex-shrink-0">
         <div className="relative">
           <Image

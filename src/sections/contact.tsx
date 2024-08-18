@@ -19,7 +19,7 @@ export default function contact() {
       <ContactList />
       <MotionDiv>
         <p className="text-sm pt-4">
-          Made with Next js and Tailwind CSS by Dhanush S M
+          Made with Next js, Tailwind CSS and Framer Motion by Dhanush S M
         </p>
       </MotionDiv>
     </section>
