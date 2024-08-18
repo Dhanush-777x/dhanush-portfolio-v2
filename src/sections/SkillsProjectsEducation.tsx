@@ -383,7 +383,7 @@ function ExperienceCard({ id, companyName, designation, duration, city, skills }
   return (
     <TimelineAnimation delay={totalDelay}>
         <h3 className="text-lg font-semibold mb-2">
-          <MotionText delayOffset={0.2}>{companyName}</MotionText>
+{companyName}
         </h3>
         <p className="text-sm text-gray-500 mb-1">{designation}</p>
         <p className="text-sm text-gray-500 mb-1">{city}</p>
@@ -411,8 +411,7 @@ function EducationCard({id, universityName, study, marks, place, duration }: Edu
 
   return (
     <TimelineAnimation delay={totalDelay}>
-      <h3 className="text-lg font-semibold mb-2">
-        <MotionText delayOffset={0.1}>{universityName}</MotionText>
+      <h3 className="text-lg font-semibold mb-2 text-wrap">{universityName}
       </h3>
       <p className="text-sm text-gray-500 mb-1">{study}</p>
       <p className="text-sm text-gray-500 mb-1">{marks}</p>
@@ -421,10 +420,6 @@ function EducationCard({id, universityName, study, marks, place, duration }: Edu
     </TimelineAnimation>
   );
 }
-
-
-
-
 
 function ProjectCard({
   projectName,
