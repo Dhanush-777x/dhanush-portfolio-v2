@@ -432,7 +432,7 @@ function ProjectCard({
   githubUrl
 }: Project) {
   return (
-    <div className="bg-white backdrop-blur-lg group rounded-xl border-none p-5 text-left shadow-none transition-all duration-200 ease-linear drop-shadow-md hover:drop-shadow-2xl w-full h-[620px] max-w-sm relative flex flex-col">
+    <div className="bg-white group rounded-xl border-none p-5 text-left shadow-none transition-all duration-200 ease-linear drop-shadow-md hover:drop-shadow-xl w-full h-[620px] max-w-sm relative flex flex-col">
       <div className="flex items-start mb-4 flex-shrink-0">
         <div className="relative">
           <Image
@@ -443,7 +443,6 @@ function ProjectCard({
             height={500}
             style={{ objectFit: 'cover' }}
             priority
-            quality={50}
           />
         </div>
       </div>
