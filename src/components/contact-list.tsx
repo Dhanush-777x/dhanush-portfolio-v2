@@ -63,7 +63,7 @@ export default function ContactList({
             <TooltipTrigger asChild>
               <Button
                 className={cn(
-                  "flex h-11 w-11 items-center justify-center rounded-full p-3 md:h-12 md:w-12",
+                  "flex h-11 w-11 items-center justify-center rounded-full p-1 md:h-12 md:w-12",
                   contact.className,
                 )}
                 asChild
@@ -74,7 +74,7 @@ export default function ContactList({
                   target="_blank"
                   aria-label={contact.name}
                 >
-                  <FontAwesomeIcon icon={contact.icon} className="w-fit" />
+                  <FontAwesomeIcon icon={contact.icon} className="w-fit text-xl" />
                 </a>
               </Button>
             </TooltipTrigger>

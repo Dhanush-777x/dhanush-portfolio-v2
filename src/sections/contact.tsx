@@ -11,12 +11,17 @@ export default function contact() {
         <h2>Contact</h2>
       </MotionDiv>
       <MotionDiv>
-        <p>
+        <p className="py-4">
           If you are interested in working together, please don't hesitate to
           get in touch with me.
         </p>
       </MotionDiv>
       <ContactList />
+      <MotionDiv>
+        <p className="text-sm pt-4">
+          Made with Next js and Tailwind CSS by Dhanush S M
+        </p>
+      </MotionDiv>
     </section>
   );
 }

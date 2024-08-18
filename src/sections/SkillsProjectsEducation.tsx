@@ -13,11 +13,13 @@ import pythonIcon from "@/assets/icons/python.png";
 import html5Icon from "@/assets/icons/html5.png";
 import css3Icon from "@/assets/icons/css3.png";
 import tailwindcssIcon from "@/assets/icons/tailwindcss.png";
+import radixIcon from '@/assets/icons/radix-ui.png';
 import shadcnuiIcon from "@/assets/icons/shadcn-ui.png";
 import bootstrapIcon from "@/assets/icons/bootstrap.png";
 import nodejsIcon from "@/assets/icons/nodejs.png";
 import expressjsIcon from "@/assets/icons/express-js.png";
 import mysqlIcon from "@/assets/icons/mysql.png";
+import SqliteIcon from '@/assets/icons/SQLite.png'
 import mongodbIcon from "@/assets/icons/mongodb.png";
 import dockerIcon from "@/assets/icons/docker.png";
 import gitIcon from "@/assets/icons/git.png";
@@ -37,12 +39,15 @@ import ihasIcon from '../assets/projectImages/project-gif/ihas-logo.gif'
 import mob4uIcon from '../assets/projectImages/project-gif/mob-logo.gif'
 import todoIcon from '../assets/projectImages/project-gif/todo-logo.gif'
 import smartevIcon from '../assets/projectImages/project-gif/ev-logo.gif'
+import portfoliov1Icon from '../assets/projectImages/project-gif/website.gif'
 
 import ihas from '../assets/projectImages/ihas-project.png'
 import mob4u from '../assets/projectImages/mob4u.png'
+import portfoliov1 from '../assets/projectImages/portfolioV1.png'
 import todo from '../assets/projectImages/todoctivity-project.png'
 import smartev from '../assets/projectImages/ev-project.jpg'
 import MotionCard from "@/components/motion-card";
+import MotionText from "@/components/motion-text";
 
 type Skill = {
   name: string;
@@ -90,15 +95,16 @@ export default function SkillsProjectsEducation() {
         { name: "CSS3", icon: css3Icon },
         { name: "Tailwind CSS", icon: tailwindcssIcon },
         { name: "Bootstrap", icon: bootstrapIcon },
-        { name: "shadcn/ui", icon: shadcnuiIcon }
+        { name: "Radix UI", icon: radixIcon }
       ]
     },
     {
       title: "Backend Development",
       skills: [
-        { name: "Express.js", icon: expressjsIcon },
         { name: "Node.js", icon: nodejsIcon },
+        { name: "Express.js", icon: expressjsIcon },
         { name: "MySQL", icon: mysqlIcon },
+        { name: "SQLite", icon: SqliteIcon },
         { name: "MongoDB", icon: mongodbIcon }
       ]
     },
@@ -171,8 +177,18 @@ export default function SkillsProjectsEducation() {
       gif: ihasIcon,
       image: ihas,
       description: "Integrated Health Accessible System (IHAS) is a comprehensive website designed to provide seamless access to various health services and resources.",
-      liveDemoUrl: "https://live-demo-link-a.com",
-      githubUrl: "https://github.com/user/project-a"
+      liveDemoUrl: "https://ihas-india.netlify.app/",
+      githubUrl: "https://github.com/Dhanush-777x/IHAS"
+    },
+    {
+      projectName: "Portfolio V1",
+      duration: "2024",
+      skills: ["React.js", "Tailwind CSS", "Framer Motion"],
+      gif: portfoliov1Icon,
+      image: portfoliov1,
+      description: "A sleek and modern portfolio showcasing my work, skills, and achievements. Built with the latest web technologies, this dynamic site highlights my projects.",
+      liveDemoUrl: "https://dhanushsm-v1.vercel.app/",
+      githubUrl: "https://github.com/Dhanush-777x/Personal-Portfolio"
     },
     {
       projectName: "Todoctivity",
@@ -181,19 +197,19 @@ export default function SkillsProjectsEducation() {
       gif: todoIcon,
       image: todo,
       description: "Todoctivity is a productivity-focused website that combines a to-do list manager with a Pomodoro timer to help users stay organized and focused.",
-      liveDemoUrl: "https://live-demo-link-b.com",
-      githubUrl: "https://github.com/user/project-b"
+      liveDemoUrl: "https://todoctivity.netlify.app/",
+      githubUrl: "https://github.com/Dhanush-777x/todoctivity"
     },
-    {
-      projectName: "Mobile Suggestion System",
-      duration: "2023",
-      skills: ["HTML5", "CSS3", "Javascript"],
-      gif: mob4uIcon,
-      image: mob4u,
-      description: "Mob4u is your go-to destination for personalized mobile phone recommendations tailored to your specific needs and preferences. Whether you prioritize a powerful processor, top-notch camera capabilities, overall user experience, or other features.",
-      liveDemoUrl: "https://live-demo-link-b.com",
-      githubUrl: "https://github.com/user/project-b"
-    },
+    // {
+    //   projectName: "Mobile Suggestion System",
+    //   duration: "2023",
+    //   skills: ["HTML5", "CSS3", "Javascript"],
+    //   gif: mob4uIcon,
+    //   image: mob4u,
+    //   description: "Mob4u is your go-to destination for personalized mobile phone recommendations tailored to your specific needs and preferences. Whether you prioritize a powerful processor, top-notch camera capabilities, overall user experience, or other features.",
+    //   liveDemoUrl: "https://live-demo-link-b.com",
+    //   githubUrl: "https://github.com/user/project-b"
+    // },
     {
       projectName: "Smart EV Charging Station with ESP 32",
       duration: "2023",
@@ -237,40 +253,41 @@ export default function SkillsProjectsEducation() {
 
   return (
     <section id="profile" className="w-full flex flex-col items-center text-center scroll-mt-32">
-      <div className="tabs flex flex-col sm:flex-row gap-4 lg:gap-24 mb-8">
-        <button
-          className={`tab-button ${
-            activeTab === "skills" ? "bg-black text-white" : "bg-gray-100"
-          } py-2 px-4 rounded-full shadow-md transition-colors duration-300`}
-          onClick={() => handleTabClick("skills")}
-        >
-          Skills
-        </button>
-        <button
-          className={`tab-button ${
-            activeTab === "experience" ? "bg-black text-white" : "bg-gray-100"
-          } py-2 px-4 rounded-full shadow-md transition-colors duration-300`}
-          onClick={() => handleTabClick("experience")}
-        >
-          Experience
-        </button>
-        <button
-          className={`tab-button ${
-            activeTab === "projects" ? "bg-black text-white" : "bg-gray-100"
-          } py-2 px-4 rounded-full shadow-md transition-colors duration-300`}
-          onClick={() => handleTabClick("projects")}
-        >
-          Projects
-        </button>
-        <button
-          className={`tab-button ${
-            activeTab === "education" ? "bg-black text-white" : "bg-gray-100"
-          } py-2 px-4 rounded-full shadow-md transition-colors duration-300`}
-          onClick={() => handleTabClick("education")}
-        >
-          Education
-        </button>
-      </div>
+<div className="tabs flex flex-wrap justify-evenly gap-6 lg:flex lg:flex-row lg:gap-24 mb-8">
+  <button
+    className={`tab-button ${
+      activeTab === "skills" ? "bg-black text-white" : "bg-gray-100"
+    } py-2 px-4 w-36 rounded-full shadow-md transition-colors duration-300`}
+    onClick={() => handleTabClick("skills")}
+  >
+    Skills
+  </button>
+  <button
+    className={`tab-button ${
+      activeTab === "experience" ? "bg-black text-white" : "bg-gray-100"
+    } py-2 px-4 w-36 rounded-full shadow-md transition-colors duration-300`}
+    onClick={() => handleTabClick("experience")}
+  >
+    Experience
+  </button>
+  <button
+    className={`tab-button ${
+      activeTab === "projects" ? "bg-black text-white" : "bg-gray-100"
+    } py-2 px-4 w-36 rounded-full shadow-md transition-colors duration-300`}
+    onClick={() => handleTabClick("projects")}
+  >
+    Projects
+  </button>
+  <button
+    className={`tab-button ${
+      activeTab === "education" ? "bg-black text-white" : "bg-gray-100"
+    } py-2 px-4 w-36 rounded-full shadow-md transition-colors duration-300`}
+    onClick={() => handleTabClick("education")}
+  >
+    Education
+  </button>
+</div>
+
 
       {activeTab === "skills" && (
         <div className="w-full">
@@ -354,11 +371,13 @@ function ExperienceCard({ companyName, designation, duration, city, skills }: Ex
       <div className="absolute left-0 top-0 bottom-0 w-1 bg-gray-300 sm:left-1"></div>
       <div className="absolute -left-1 top-1/2 transform -translate-y-1/2 h-4 w-4 bg-black rounded-full border border-white sm:-left-0.5"></div>
       <div className="ml-8 text-left bg-white border border-gray-200 rounded-xl shadow-lg w-80 sm:w-80 lg:w-[70vh] px-10 py-5 mb-10">
-        <h3 className="text-lg font-semibold mb-2">{companyName}</h3>
+        <h3 className="text-lg font-semibold mb-2">
+          <MotionText delayOffset={0.2}>{companyName}</MotionText>
+        </h3>
         <p className="text-sm text-gray-500 mb-1">{designation}</p>
         <p className="text-sm text-gray-500 mb-1">{city}</p>
         <p className="text-sm text-gray-500 mb-2">{duration}</p>
-        <div className="flex flex-wrap gap-2 justify-left">
+        <MotionList className="flex flex-wrap gap-2 justify-left">
         {skills.map((skill, index) => (
           <span
             key={index}
@@ -368,7 +387,7 @@ function ExperienceCard({ companyName, designation, duration, city, skills }: Ex
           </span>
         ))}
 
-      </div>
+      </MotionList>
       </div>
     </div>
   );
@@ -381,7 +400,9 @@ function EducationCard({ universityName, study, marks, place, duration }: Educat
       <div className="absolute left-0 top-0 bottom-0 w-1 bg-gray-300 sm:left-1"></div>
       <div className="absolute -left-1 top-1/2 transform -translate-y-1/2 h-4 w-4 bg-black rounded-full border border-white sm:-left-0.5"></div>
       <div className="ml-8 text-left bg-white border border-gray-200 rounded-xl shadow-lg w-80 sm:w-80 lg:w-[70vh] px-10 py-5 mb-10">
-        <h3 className="text-lg font-semibold mb-2">{universityName}</h3>
+        <h3 className="text-lg font-semibold mb-2">
+          <MotionText delayOffset={0.1}>{universityName}</MotionText>
+          </h3>
         <p className="text-sm text-gray-500 mb-1">{study}</p>
         <p className="text-sm text-gray-500 mb-1">{marks}</p>
         <p className="text-sm text-gray-500 mb-1">{place}</p>
@@ -433,13 +454,13 @@ function ProjectCard({
         </h3>
         <p className="text-sm text-gray-500 mb-1 ml-12">{duration}</p>
         <p className="text-sm text-gray-500 mb-4 ml-12">{description}</p>
-        <div className="flex flex-wrap gap-2 justify-left mb-4 ml-12">
+        <MotionList className="flex flex-wrap gap-2 justify-left mb-4 ml-12">
           {skills.map((skill, index) => (
             <span key={index} className="bg-white rounded-full px-3 py-1 text-xs font-medium shadow-md">
               {skill}
             </span>
           ))}
-        </div>
+        </MotionList>
       </div>
       <div className="flex justify-end gap-4 mt-auto">
         <a
