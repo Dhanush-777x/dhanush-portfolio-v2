@@ -28,7 +28,9 @@ import BraveIcon from "@/assets/icons/braveBrowser.png";
 import alacrittyIcon from "@/assets/icons/alacritty.png";
 import premiereProIcon from "@/assets/icons/premierepro.png";
 import figmaIcon from "@/assets/icons/figma.png";
+import zshIcon from '@/assets/icons/zsh.png'
 import canvaIcon from "@/assets/icons/canva.png";
+import filmoraIcon from '@/assets/icons/filmora.png'
 import githubIcon from "@/assets/icons/github.png";
 
 import ihasIcon from '../assets/projectImages/project-gif/ihas-logo.gif'
@@ -123,6 +125,7 @@ export default function SkillsProjectsEducation() {
         { name: "VS Code", icon: vscodeIcon },
         { name: "Brave", icon: BraveIcon },
         { name: "Alacritty", icon: alacrittyIcon },
+        { name: "Oh My Zsh", icon: zshIcon },
         { name: "Figma", icon: figmaIcon }
       ]
     },
@@ -130,7 +133,8 @@ export default function SkillsProjectsEducation() {
       title: "Visual",
       skills: [
         { name: "Premiere Pro", icon: premiereProIcon },
-        { name: "Canva", icon: canvaIcon }
+        { name: "Canva", icon: canvaIcon },
+        { name: "Filmora", icon: filmoraIcon }
       ]
     }
   ];
@@ -305,7 +309,7 @@ export default function SkillsProjectsEducation() {
           <MotionDiv>
             <h2 className="mb-4">Projects</h2>
           </MotionDiv>
-          <div className="flex flex-wrap justify-center gap-8">
+          <div className="flex flex-wrap justify-center gap-6 lg:gap-2 xl:gap-10">
             {projectsData.map((project, index) => (
               <MotionDiv key={index}>
                 <ProjectCard {...project} />
@@ -386,76 +390,6 @@ function EducationCard({ universityName, study, marks, place, duration }: Educat
     </div>
   );
 }
-
-// function ProjectCard({
-//   projectName,
-//   duration,
-//   skills,
-//   gif,
-//   image,
-//   description,
-//   liveDemoUrl,
-//   githubUrl
-// }: Project) {
-//   return (
-//     <div className="bg-white group rounded-xl border-none p-5 text-left shadow-none transition-all duration-200 ease-linear drop-shadow-md hover:drop-shadow-xl w-full h-[500px] max-w-sm relative">
-//       <div className="flex items-start mb-4">
-//         <div className="relative">
-//           <Image
-//             src={image}
-//             alt={`${projectName} Image`}
-//             className="object-cover rounded-xl"
-//             width={500}
-//             height={500}
-//             style={{ objectFit: 'cover' }}
-//             priority
-//             quality={50}
-//           />
-//         </div>
-//       </div>
-//       <h3 className="text-lg font-semibold mb-2 flex items-center">
-//         <div className="relative w-12 h-12 mr-2">
-//           <Image
-//             src={gif}
-//             alt={`${projectName} GIF`}
-//             className="object-cover rounded-xl"
-//             width={50} 
-//             height={50}
-//             priority
-//           />
-//         </div>
-//         {projectName}
-//       </h3>
-//       <p className="text-sm text-gray-500 mb-1 ml-12">{duration}</p>
-//       <p className="text-sm text-gray-500 mb-4 ml-12">{description}</p>
-//       <div className="flex flex-wrap gap-2 justify-left mb-4 ml-12">
-//         {skills.map((skill, index) => (
-//           <span key={index} className="bg-gray-200 rounded-full px-3 py-1 text-xs font-medium text-gray-800">
-//             {skill}
-//           </span>
-//         ))}
-//       </div>
-//       <div className="flex justify-end mt-auto gap-4 px-8">
-//         <a
-//           href={liveDemoUrl}
-//           target="_blank"
-//           rel="noopener noreferrer"
-//           className="border-black text-black flex justify-center items-center rounded-full shadow-md transition-transform transform hover:scale-105 w-8 h-8"
-//         >
-//           <FontAwesomeIcon icon={faExternalLinkAlt} className="text-xl" />
-//         </a>
-//         <a
-//           href={githubUrl}
-//           target="_blank"
-//           rel="noopener noreferrer"
-//           className="bg-black text-white flex justify-center items-center rounded-full shadow-md transition-transform transform hover:scale-105 w-8 h-8"
-//         >
-//           <FontAwesomeIcon icon={faGithub} className="text-xl" />
-//         </a>
-//       </div>
-//     </div>
-//   );
-// }
 
 function ProjectCard({
   projectName,
