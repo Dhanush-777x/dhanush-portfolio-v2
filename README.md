@@ -22,13 +22,13 @@ To get a local copy of this project up and running on your machine, follow these
 1. **Clone the repository:**
 
     ```bash
-    git clone https://github.com/yourusername/your-repository.git
+    git clone https://github.com/Dhanush-777x/dhanush-portfolio-v2.git
     ```
 
 2. **Navigate to the project directory:**
 
     ```bash
-    cd your-repository
+    cd dhanush-portfolio-v2
     ```
 
 3. **Install the dependencies using pnpm:**
