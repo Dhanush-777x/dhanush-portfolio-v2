@@ -193,7 +193,7 @@ export default function SkillsProjectsEducation() {
     {
       projectName: "Todoctivity",
       duration: "2023",
-      skills: ["HTML5", "CSS3", "Javascript"],
+      skills: ["HTML5", "CSS3", "Javascript", "Bootstrap"],
       gif: todoIcon,
       image: todo,
       description: "Todoctivity is a productivity-focused website that combines a to-do list manager with a Pomodoro timer to help users stay organized and focused.",
@@ -213,10 +213,10 @@ export default function SkillsProjectsEducation() {
     {
       projectName: "Smart EV Charging Station with ESP 32",
       duration: "2023",
-      skills: ["esp32", "GSM Module", "Two way relay", "Voltage Regulator", "Aurdino IDE"],
+      skills: ["esp32", "GSM Module", "Voltage Regulator", "Aurdino IDE"],
       gif: smartevIcon,
       image: smartev,
-      description: "Smart EV Charging Station with ESP32 is a cutting-edge project designed to revolutionize the electric vehicle(EV) charging experience. By leveraging the power of ESP32 microcontrollers and IoT technology, this system offers intelligent and efficient charging solutions..",
+      description: "Smart EV Charging Station with ESP32 is a cutting-edge project designed to revolutionize the electric vehicle(EV) charging experience. By leveraging the power of ESP32 microcontrollers and IoT technology.",
       liveDemoUrl: "https://live-demo-link-b.com",
       githubUrl: "https://github.com/user/project-b"
     }
@@ -423,7 +423,7 @@ function ProjectCard({
   githubUrl
 }: Project) {
   return (
-    <div className="bg-white group rounded-xl border-none p-5 text-left shadow-none transition-all duration-200 ease-linear drop-shadow-md hover:drop-shadow-xl w-full h-[600px] max-w-sm relative flex flex-col">
+    <div className="bg-white group rounded-xl border-none p-5 text-left shadow-none transition-all duration-200 ease-linear drop-shadow-md hover:drop-shadow-xl w-full h-[620px] max-w-sm relative flex flex-col">
       <div className="flex items-start mb-4 flex-shrink-0">
         <div className="relative">
           <Image
