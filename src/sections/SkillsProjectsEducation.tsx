@@ -442,6 +442,7 @@ function ProjectCard({
             width={500}
             height={500}
             style={{ objectFit: 'cover' }}
+            quality={80}
             priority
           />
         </div>
@@ -455,6 +456,7 @@ function ProjectCard({
               className="object-cover rounded-xl"
               width={50} 
               height={50}
+              quality={50}
               priority
             />
           </div>
@@ -462,13 +464,13 @@ function ProjectCard({
         </h3>
         <p className="text-sm text-gray-500 mb-1 ml-12">{duration}</p>
         <p className="text-sm text-gray-500 mb-4 ml-12">{description}</p>
-        <MotionList className="flex flex-wrap gap-2 justify-left mb-4 ml-12">
+        <div className="flex flex-wrap gap-2 justify-left mb-4 ml-12">
           {skills.map((skill, index) => (
             <span key={index} className="bg-white rounded-full px-3 py-1 text-xs font-medium shadow-md">
               {skill}
             </span>
           ))}
-        </MotionList>
+        </div>
       </div>
       <div className="flex justify-end gap-4 mt-auto">
         <a
