@@ -137,7 +137,6 @@ export default function SkillsProjectsEducation() {
       skills: [
         { name: "Fedora", icon: fedoraIcon },
         { name: "VS Code", icon: vscodeIcon },
-        { name: "Brave", icon: BraveIcon },
         { name: "Alacritty", icon: alacrittyIcon },
         { name: "Oh My Zsh", icon: zshIcon }
       ]
