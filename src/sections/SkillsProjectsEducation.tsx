@@ -43,6 +43,7 @@ import smartevIcon from '../assets/projectImages/project-gif/ev-logo.gif'
 import portfoliov1Icon from '../assets/projectImages/project-gif/website.gif'
 
 import ihas from '../assets/projectImages/ihas-project.png'
+import nxtTrendz from '../assets/projectImages/nxtTrendz.png'
 import mob4u from '../assets/projectImages/mob4u.png'
 import portfoliov1 from '../assets/projectImages/portfolioV1.png'
 import todo from '../assets/projectImages/todoctivity-project.png'
@@ -188,6 +189,16 @@ export default function SkillsProjectsEducation() {
       description: "Integrated Health Accessible System (IHAS) is a comprehensive website designed to provide seamless access to various health services and resources.",
       liveDemoUrl: "https://ihas-india.netlify.app/",
       githubUrl: "https://github.com/Dhanush-777x/IHAS"
+    },
+    {
+      projectName: "Nxt Trendz",
+      duration: "2024",
+      skills: ["React.js", "CSS", "JWT"],
+      gif: mob4uIcon,
+      image: nxtTrendz,
+      description: "Nxt Trendz is a modern e-commerce platform  which provides a seamless shopping experience and featuring user-friendly navigation. Whether you're looking for the latest fashion trends or timeless classics, Nxt Trendz has something for everyone.",
+      liveDemoUrl: "https://nxtTrendzWorld.ccbp.tech/",
+      githubUrl: "https://github.com/Dhanush-777x/nxtTrendz"
     },
     {
       projectName: "Portfolio V1",
