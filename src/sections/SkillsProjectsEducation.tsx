@@ -22,9 +22,9 @@ import SqliteIcon from "@/assets/icons/SQLite.png";
 import mongodbIcon from "@/assets/icons/mongodb.png";
 import dockerIcon from "@/assets/icons/docker.png";
 import gitIcon from "@/assets/icons/git.png";
-import ubuntuIcon from "@/assets/icons/ubuntu.svg"
+import ubuntuIcon from "@/assets/icons/ubuntu.svg";
 import endeavourosIcon from "@/assets/icons/endeavouros-icon.png";
-import kittyIcon from '@/assets/icons/kittyTerm.png'
+import kittyIcon from "@/assets/icons/kittyTerm.png";
 import vscodeIcon from "@/assets/icons/vscode.png";
 import premiereProIcon from "@/assets/icons/premierepro.png";
 import figmaIcon from "@/assets/icons/figma.png";
@@ -39,7 +39,7 @@ import mob4uIcon from "../assets/projectImages/project-gif/mob-logo.gif";
 import todoIcon from "../assets/projectImages/project-gif/todo-logo.gif";
 import smartevIcon from "../assets/projectImages/project-gif/ev-logo.gif";
 import portfoliov1Icon from "../assets/projectImages/project-gif/website.gif";
-import zenTrckIcon from "@/assets/icons/zenTrck.gif"
+import zenTrckIcon from "@/assets/icons/zenTrck.gif";
 
 import ihas from "../assets/projectImages/ihas-project.png";
 import nxtTrendz from "../assets/projectImages/nxtTrendz.png";
@@ -136,9 +136,9 @@ export default function SkillsProjectsEducation() {
     {
       title: "Tools & Environment",
       skills: [
-        { name: "EndeavourOS", icon: endeavourosIcon},
+        { name: "EndeavourOS", icon: endeavourosIcon },
         { name: "VS Code", icon: vscodeIcon },
-        { name: "Kitty", icon: kittyIcon},
+        { name: "Kitty", icon: kittyIcon },
         { name: "Oh My Zsh", icon: zshIcon },
       ],
     },
@@ -180,6 +180,17 @@ export default function SkillsProjectsEducation() {
   ];
 
   const projectsData: Project[] = [
+    {
+      projectName: "ZenTrck - Sleek and Modern Landing Page",
+      duration: "2024",
+      skills: ["Next.js", "Tailwind CSS", "Framer Motion"],
+      gif: zenTrckIcon,
+      image: zenTrackProject,
+      description:
+        "A sleek and modern landing page designed to showcase your ultimate productivity tracking app. Built with responsive design and user-centric features.",
+      liveDemoUrl: "https://zentrck.vercel.app/",
+      githubUrl: "https://github.com/Dhanush-777x/ZenTrck",
+    },
     {
       projectName: "Integrated Health Accessible System",
       duration: "2024",
@@ -234,17 +245,6 @@ export default function SkillsProjectsEducation() {
         "Smart EV Charging Station with ESP32 is a cutting-edge project designed to revolutionize the electric vehicle(EV) charging experience. By leveraging the power of ESP32 microcontrollers and IoT technology.",
       liveDemoUrl: "https://live-demo-link-b.com",
       githubUrl: "https://github.com/user/project-b",
-    },
-    {
-      projectName: "ZenTrck - Sleek and Modern Landing Page",
-      duration: "2024",
-      skills: ["Next.js", "Tailwind CSS", "Framer Motion"],
-      gif: zenTrckIcon,
-      image: zenTrackProject,
-      description:
-        "A sleek and modern landing page designed to showcase your ultimate productivity tracking app. Built with responsive design and user-centric features.",
-      liveDemoUrl: "https://zentrck.vercel.app/",
-      githubUrl: "https://github.com/Dhanush-777x/ZenTrck",
     },
   ];
 
