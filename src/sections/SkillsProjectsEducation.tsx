@@ -13,46 +13,46 @@ import pythonIcon from "@/assets/icons/python.png";
 import html5Icon from "@/assets/icons/html5.png";
 import css3Icon from "@/assets/icons/css3.png";
 import tailwindcssIcon from "@/assets/icons/tailwindcss.png";
-import radixIcon from '@/assets/icons/radix-ui.png';
-import shadcnuiIcon from "@/assets/icons/shadcn-ui.png";
+import radixIcon from "@/assets/icons/radix-ui.png";
 import bootstrapIcon from "@/assets/icons/bootstrap.png";
 import nodejsIcon from "@/assets/icons/nodejs.png";
 import expressjsIcon from "@/assets/icons/express-js.png";
 import mysqlIcon from "@/assets/icons/mysql.png";
-import SqliteIcon from '@/assets/icons/SQLite.png'
+import SqliteIcon from "@/assets/icons/SQLite.png";
 import mongodbIcon from "@/assets/icons/mongodb.png";
 import dockerIcon from "@/assets/icons/docker.png";
 import gitIcon from "@/assets/icons/git.png";
-import ubuntuIcon from "@/assets/icons/ubuntu.svg";
-import fedoraIcon from "@/assets/icons/fedora.png";
+import ubuntuIcon from "@/assets/icons/ubuntu.svg"
+import endeavourosIcon from "@/assets/icons/endeavouros-icon.png";
+import kittyIcon from '@/assets/icons/kittyTerm.png'
 import vscodeIcon from "@/assets/icons/vscode.png";
-import BraveIcon from "@/assets/icons/braveBrowser.png";
-import alacrittyIcon from "@/assets/icons/alacritty.png";
 import premiereProIcon from "@/assets/icons/premierepro.png";
 import figmaIcon from "@/assets/icons/figma.png";
-import zshIcon from '@/assets/icons/zsh.png'
+import zshIcon from "@/assets/icons/zsh.png";
 import canvaIcon from "@/assets/icons/canva.png";
-import filmoraIcon from '@/assets/icons/filmora.png'
+import filmoraIcon from "@/assets/icons/filmora.png";
 import githubIcon from "@/assets/icons/github.png";
-import framerMotionIcon from '@/assets/icons/framer.svg'
+import framerMotionIcon from "@/assets/icons/framer.svg";
 
-import ihasIcon from '../assets/projectImages/project-gif/ihas-logo.gif'
-import mob4uIcon from '../assets/projectImages/project-gif/mob-logo.gif'
-import todoIcon from '../assets/projectImages/project-gif/todo-logo.gif'
-import smartevIcon from '../assets/projectImages/project-gif/ev-logo.gif'
-import portfoliov1Icon from '../assets/projectImages/project-gif/website.gif'
+import ihasIcon from "../assets/projectImages/project-gif/ihas-logo.gif";
+import mob4uIcon from "../assets/projectImages/project-gif/mob-logo.gif";
+import todoIcon from "../assets/projectImages/project-gif/todo-logo.gif";
+import smartevIcon from "../assets/projectImages/project-gif/ev-logo.gif";
+import portfoliov1Icon from "../assets/projectImages/project-gif/website.gif";
+import zenTrckIcon from "@/assets/icons/zenTrck.gif"
 
-import ihas from '../assets/projectImages/ihas-project.png'
-import nxtTrendz from '../assets/projectImages/nxtTrendz.png'
-import mob4u from '../assets/projectImages/mob4u.png'
-import portfoliov1 from '../assets/projectImages/portfolioV1.png'
-import todo from '../assets/projectImages/todoctivity-project.png'
-import smartev from '../assets/projectImages/ev-project.jpg'
+import ihas from "../assets/projectImages/ihas-project.png";
+import nxtTrendz from "../assets/projectImages/nxtTrendz.png";
+import mob4u from "../assets/projectImages/mob4u.png";
+import portfoliov1 from "../assets/projectImages/portfolioV1.png";
+import todo from "../assets/projectImages/todoctivity-project.png";
+import smartev from "../assets/projectImages/ev-project.jpg";
+import zenTrackProject from "../assets/projectImages/zenTrack.png";
+
 import MotionCard from "@/components/motion-card";
 import MotionText from "@/components/motion-text";
 
-import { TimelineAnimation } from '../components/timeline-animation';
-
+import { TimelineAnimation } from "../components/timeline-animation";
 
 type Skill = {
   name: string;
@@ -72,11 +72,11 @@ type Project = {
   projectName: string;
   duration: string;
   skills: string[];
-  gif: any,
-  image: any,
-  description: string,
-  liveDemoUrl: string,
-  githubUrl: string
+  gif: any;
+  image: any;
+  description: string;
+  liveDemoUrl: string;
+  githubUrl: string;
 };
 
 type Education = {
@@ -104,8 +104,8 @@ export default function SkillsProjectsEducation() {
         { name: "Bootstrap", icon: bootstrapIcon },
         { name: "Radix UI", icon: radixIcon },
         { name: "Framer Motion", icon: framerMotionIcon },
-        { name: "Figma", icon: figmaIcon }
-      ]
+        { name: "Figma", icon: figmaIcon },
+      ],
     },
     {
       title: "Backend Development",
@@ -114,8 +114,8 @@ export default function SkillsProjectsEducation() {
         { name: "Express.js", icon: expressjsIcon },
         { name: "MySQL", icon: mysqlIcon },
         { name: "SQLite", icon: SqliteIcon },
-        { name: "MongoDB", icon: mongodbIcon }
-      ]
+        { name: "MongoDB", icon: mongodbIcon },
+      ],
     },
     {
       title: "DevOps",
@@ -123,33 +123,33 @@ export default function SkillsProjectsEducation() {
         { name: "Git", icon: gitIcon },
         { name: "GitHub", icon: githubIcon },
         { name: "Docker", icon: dockerIcon },
-        { name: "Ubuntu", icon: ubuntuIcon }
-      ]
+        { name: "Ubuntu", icon: ubuntuIcon },
+      ],
     },
     {
       title: "Languages",
       skills: [
         { name: "JavaScript", icon: javascriptIcon },
-        { name: "Python", icon: pythonIcon }
-      ]
+        { name: "Python", icon: pythonIcon },
+      ],
     },
     {
       title: "Tools & Environment",
       skills: [
-        { name: "Fedora", icon: fedoraIcon },
+        { name: "EndeavourOS", icon: endeavourosIcon},
         { name: "VS Code", icon: vscodeIcon },
-        { name: "Alacritty", icon: alacrittyIcon },
-        { name: "Oh My Zsh", icon: zshIcon }
-      ]
+        { name: "Kitty", icon: kittyIcon},
+        { name: "Oh My Zsh", icon: zshIcon },
+      ],
     },
     {
       title: "Visual",
       skills: [
         { name: "Premiere Pro", icon: premiereProIcon },
         { name: "Canva", icon: canvaIcon },
-        { name: "Filmora", icon: filmoraIcon }
-      ]
-    }
+        { name: "Filmora", icon: filmoraIcon },
+      ],
+    },
   ];
 
   const experienceData: Experience[] = [
@@ -159,7 +159,7 @@ export default function SkillsProjectsEducation() {
       designation: "Summer Intern",
       duration: "May 2024 - Jul 2024",
       city: "Chennai, India",
-      skills: ["OpenWRT", "Node.js", "JWT", "Nginx"]
+      skills: ["OpenWRT", "Node.js", "JWT", "Nginx"],
     },
     {
       id: 1,
@@ -167,7 +167,7 @@ export default function SkillsProjectsEducation() {
       designation: "Frontend Developer",
       duration: "Dec 2023 - Feb 2023",
       city: "Chennai, India",
-      skills: ["HTML5", "CSS3", "Javascript", "Bootstrap"]
+      skills: ["HTML5", "CSS3", "Javascript", "Bootstrap"],
     },
     {
       id: 2,
@@ -175,20 +175,21 @@ export default function SkillsProjectsEducation() {
       designation: "Summer Intern",
       duration: "Jun 2023 - Jul 2023",
       city: "Chennai, India",
-      skills: ["Angular", "Bootstrap", "Flask", "MySQL"]
-    }
+      skills: ["Angular", "Bootstrap", "Flask", "MySQL"],
+    },
   ];
 
   const projectsData: Project[] = [
     {
       projectName: "Integrated Health Accessible System",
       duration: "2024",
-      skills: ["React.js","Tailwind CSS", "Node.js", "Express.js"],
+      skills: ["React.js", "Tailwind CSS", "Node.js", "Express.js"],
       gif: ihasIcon,
       image: ihas,
-      description: "Integrated Health Accessible System (IHAS) is a comprehensive website designed to provide seamless access to various health services and resources.",
+      description:
+        "Integrated Health Accessible System (IHAS) is a comprehensive website designed to provide seamless access to various health services and resources.",
       liveDemoUrl: "https://ihas-india.netlify.app/",
-      githubUrl: "https://github.com/Dhanush-777x/IHAS"
+      githubUrl: "https://github.com/Dhanush-777x/IHAS",
     },
     {
       projectName: "Nxt Trendz",
@@ -196,9 +197,10 @@ export default function SkillsProjectsEducation() {
       skills: ["React.js", "CSS", "JWT"],
       gif: mob4uIcon,
       image: nxtTrendz,
-      description: "Nxt Trendz is a modern e-commerce platform  which provides a seamless shopping experience and featuring user-friendly navigation. Whether you're looking for the latest fashion trends or timeless classics, Nxt Trendz has something for everyone.",
+      description:
+        "Nxt Trendz is a modern e-commerce platform  which provides a seamless shopping experience and featuring user-friendly navigation. Whether you're looking for the latest fashion trends or timeless classics, Nxt Trendz has something for everyone.",
       liveDemoUrl: "https://nxtTrendzWorld.ccbp.tech/",
-      githubUrl: "https://github.com/Dhanush-777x/nxtTrendz"
+      githubUrl: "https://github.com/Dhanush-777x/nxtTrendz",
     },
     {
       projectName: "Portfolio V1",
@@ -206,9 +208,10 @@ export default function SkillsProjectsEducation() {
       skills: ["React.js", "Tailwind CSS", "Framer Motion"],
       gif: portfoliov1Icon,
       image: portfoliov1,
-      description: "A sleek and modern portfolio showcasing my work, skills, and achievements. Built with the latest web technologies, this dynamic site highlights my projects.",
+      description:
+        "A sleek and modern portfolio showcasing my work, skills, and achievements. Built with the latest web technologies, this dynamic site highlights my projects.",
       liveDemoUrl: "https://dhanushsm-v1.vercel.app/",
-      githubUrl: "https://github.com/Dhanush-777x/Personal-Portfolio"
+      githubUrl: "https://github.com/Dhanush-777x/Personal-Portfolio",
     },
     {
       projectName: "Todoctivity",
@@ -216,9 +219,10 @@ export default function SkillsProjectsEducation() {
       skills: ["HTML5", "CSS3", "Javascript", "Bootstrap"],
       gif: todoIcon,
       image: todo,
-      description: "Todoctivity is a productivity-focused website that combines a to-do list manager with a Pomodoro timer to help users stay organized and focused.",
+      description:
+        "Todoctivity is a productivity-focused website that combines a to-do list manager with a Pomodoro timer to help users stay organized and focused.",
       liveDemoUrl: "https://todoctivity.netlify.app/",
-      githubUrl: "https://github.com/Dhanush-777x/todoctivity"
+      githubUrl: "https://github.com/Dhanush-777x/todoctivity",
     },
     {
       projectName: "Smart EV Charging Station with ESP 32",
@@ -226,48 +230,51 @@ export default function SkillsProjectsEducation() {
       skills: ["esp32", "GSM Module", "Voltage Regulator", "Aurdino IDE"],
       gif: smartevIcon,
       image: smartev,
-      description: "Smart EV Charging Station with ESP32 is a cutting-edge project designed to revolutionize the electric vehicle(EV) charging experience. By leveraging the power of ESP32 microcontrollers and IoT technology.",
+      description:
+        "Smart EV Charging Station with ESP32 is a cutting-edge project designed to revolutionize the electric vehicle(EV) charging experience. By leveraging the power of ESP32 microcontrollers and IoT technology.",
       liveDemoUrl: "https://live-demo-link-b.com",
-      githubUrl: "https://github.com/user/project-b"
+      githubUrl: "https://github.com/user/project-b",
     },
-    // {
-    //   projectName: "Mobile Suggestion System",
-    //   duration: "2023",
-    //   skills: ["HTML5", "CSS3", "Javascript"],
-    //   gif: mob4uIcon,
-    //   image: mob4u,
-    //   description: "Mob4u is your go-to destination for personalized mobile phone recommendations tailored to your specific needs and preferences. Whether you prioritize a powerful processor, top-notch camera capabilities, overall user experience, or other features.",
-    //   liveDemoUrl: "https://live-demo-link-b.com",
-    //   githubUrl: "https://github.com/user/project-b"
-    // },
+    {
+      projectName: "ZenTrck - Sleek and Modern Landing Page",
+      duration: "2024",
+      skills: ["Next.js", "Tailwind CSS", "Framer Motion"],
+      gif: zenTrckIcon,
+      image: zenTrackProject,
+      description:
+        "A sleek and modern landing page designed to showcase your ultimate productivity tracking app. Built with responsive design and user-centric features.",
+      liveDemoUrl: "https://zentrck.vercel.app/",
+      githubUrl: "https://github.com/Dhanush-777x/ZenTrck",
+    },
   ];
-  
 
   const educationData: Education[] = [
     {
       id: 0,
       universityName: "Shiv Nadar University Chennai",
       study: "B.Tech in Computer Science (IoT)",
-      marks: "8.67 CGPA",
+      marks: "8.61 CGPA",
       place: "Chennai, India",
-      duration: "2021 - Present"
+      duration: "2021 - Present",
     },
     {
       id: 1,
-      universityName: "Sri Vijay Vidyalaya Matriculation Higher Secondary School",
+      universityName:
+        "Sri Vijay Vidyalaya Matriculation Higher Secondary School",
       study: "PCMB",
       marks: "92.6%",
       place: "Hosur, India",
-      duration: "2019 - 2021"
+      duration: "2019 - 2021",
     },
     {
       id: 2,
-      universityName: "Sri Vijay Vidyalaya Matriculation Higher Secondary School",
+      universityName:
+        "Sri Vijay Vidyalaya Matriculation Higher Secondary School",
       study: "HSC",
       marks: "96.2%",
       place: "Hosur, India",
-      duration: "2018 - 2019"
-    }
+      duration: "2018 - 2019",
+    },
   ];
 
   const handleTabClick = (tab: string) => {
@@ -275,42 +282,44 @@ export default function SkillsProjectsEducation() {
   };
 
   return (
-    <section id="profile" className="w-full flex flex-col items-center text-center scroll-mt-32">
-<div className="tabs flex flex-wrap justify-evenly gap-6 lg:flex lg:flex-row lg:gap-24 mb-8">
-  <button
-    className={`tab-button ${
-      activeTab === "skills" ? "bg-black text-white" : "bg-gray-100"
-    } py-2 px-4 w-36 rounded-full shadow-md transition-colors duration-300`}
-    onClick={() => handleTabClick("skills")}
-  >
-    Skills
-  </button>
-  <button
-    className={`tab-button ${
-      activeTab === "experience" ? "bg-black text-white" : "bg-gray-100"
-    } py-2 px-4 w-36 rounded-full shadow-md transition-colors duration-300`}
-    onClick={() => handleTabClick("experience")}
-  >
-    Experience
-  </button>
-  <button
-    className={`tab-button ${
-      activeTab === "projects" ? "bg-black text-white" : "bg-gray-100"
-    } py-2 px-4 w-36 rounded-full shadow-md transition-colors duration-300`}
-    onClick={() => handleTabClick("projects")}
-  >
-    Projects
-  </button>
-  <button
-    className={`tab-button ${
-      activeTab === "education" ? "bg-black text-white" : "bg-gray-100"
-    } py-2 px-4 w-36 rounded-full shadow-md transition-colors duration-300`}
-    onClick={() => handleTabClick("education")}
-  >
-    Education
-  </button>
-</div>
-
+    <section
+      id="profile"
+      className="flex w-full scroll-mt-32 flex-col items-center text-center"
+    >
+      <div className="tabs mb-8 flex flex-wrap justify-evenly gap-6 lg:flex lg:flex-row lg:gap-24">
+        <button
+          className={`tab-button ${
+            activeTab === "skills" ? "bg-black text-white" : "bg-gray-100"
+          } w-36 rounded-full px-4 py-2 shadow-md transition-colors duration-300`}
+          onClick={() => handleTabClick("skills")}
+        >
+          Skills
+        </button>
+        <button
+          className={`tab-button ${
+            activeTab === "experience" ? "bg-black text-white" : "bg-gray-100"
+          } w-36 rounded-full px-4 py-2 shadow-md transition-colors duration-300`}
+          onClick={() => handleTabClick("experience")}
+        >
+          Experience
+        </button>
+        <button
+          className={`tab-button ${
+            activeTab === "projects" ? "bg-black text-white" : "bg-gray-100"
+          } w-36 rounded-full px-4 py-2 shadow-md transition-colors duration-300`}
+          onClick={() => handleTabClick("projects")}
+        >
+          Projects
+        </button>
+        <button
+          className={`tab-button ${
+            activeTab === "education" ? "bg-black text-white" : "bg-gray-100"
+          } w-36 rounded-full px-4 py-2 shadow-md transition-colors duration-300`}
+          onClick={() => handleTabClick("education")}
+        >
+          Education
+        </button>
+      </div>
 
       {activeTab === "skills" && (
         <div className="w-full">
@@ -337,19 +346,19 @@ export default function SkillsProjectsEducation() {
             <h2 className="mb-4">Experience</h2>
           </MotionDiv>
           <MotionCard className="flex flex-col items-center">
-          {experienceData.map((exp, index) => (
-            <ExperienceCard key={index} {...exp} />
-          ))}
-        </MotionCard>
-      </div>
+            {experienceData.map((exp, index) => (
+              <ExperienceCard key={index} {...exp} />
+            ))}
+          </MotionCard>
+        </div>
       )}
 
-{activeTab === "projects" && (
+      {activeTab === "projects" && (
         <div className="w-full">
           <MotionDiv>
             <h2 className="mb-4">Projects</h2>
           </MotionDiv>
-          <div className="flex flex-wrap justify-center gap-6 lg:gap-2 xl:gap-10 bg-transparent backdrop-blur-lg">
+          <div className="flex flex-wrap justify-center gap-6 bg-transparent backdrop-blur-lg lg:gap-2 xl:gap-10">
             {projectsData.map((project, index) => (
               <MotionDiv key={index}>
                 <ProjectCard {...project} />
@@ -365,10 +374,10 @@ export default function SkillsProjectsEducation() {
             <h2 className="mb-4">Education</h2>
           </MotionDiv>
           <MotionCard className="flex flex-col items-center">
-          {educationData.map((edu, index) => (
-            <EducationCard key={index} {...edu} />
-          ))}
-        </MotionCard>
+            {educationData.map((edu, index) => (
+              <EducationCard key={index} {...edu} />
+            ))}
+          </MotionCard>
         </div>
       )}
     </section>
@@ -388,45 +397,52 @@ function SkillCard({ icon, name }: Skill) {
   );
 }
 
-function ExperienceCard({ id, companyName, designation, duration, city, skills }: Experience) {
-  const totalDelay = id + id * 0.6
+function ExperienceCard({
+  id,
+  companyName,
+  designation,
+  duration,
+  city,
+  skills,
+}: Experience) {
+  const totalDelay = id + id * 0.6;
   return (
     <TimelineAnimation delay={totalDelay}>
-        <h3 className="text-lg font-semibold mb-2">
-{companyName}
-        </h3>
-        <p className="text-sm text-gray-500 mb-1">{designation}</p>
-        <p className="text-sm text-gray-500 mb-1">{city}</p>
-        <p className="text-sm text-gray-500 mb-2">{duration}</p>
-        <MotionList className="flex flex-wrap gap-2 justify-left">
+      <h3 className="mb-2 text-lg font-semibold">{companyName}</h3>
+      <p className="mb-1 text-sm text-gray-500">{designation}</p>
+      <p className="mb-1 text-sm text-gray-500">{city}</p>
+      <p className="mb-2 text-sm text-gray-500">{duration}</p>
+      <MotionList className="justify-left flex flex-wrap gap-2">
         {skills.map((skill, index) => (
           <span
             key={index}
-            className="bg-white bg-opacity-30 border border-white border-opacity-40 rounded-full px-3 py-1 text-xs font-medium text-gray-800 backdrop-blur-lg shadow-md hover:shadow-lg"
+            className="rounded-full border border-white border-opacity-40 bg-white bg-opacity-30 px-3 py-1 text-xs font-medium text-gray-800 shadow-md backdrop-blur-lg hover:shadow-lg"
           >
             {skill}
           </span>
         ))}
-
       </MotionList>
     </TimelineAnimation>
   );
 }
 
-
-
-
-function EducationCard({id, universityName, study, marks, place, duration }: Education) {
-  const totalDelay = id + id * 0.6
+function EducationCard({
+  id,
+  universityName,
+  study,
+  marks,
+  place,
+  duration,
+}: Education) {
+  const totalDelay = id + id * 0.6;
 
   return (
     <TimelineAnimation delay={totalDelay}>
-      <h3 className="text-lg font-semibold mb-2 text-wrap">{universityName}
-      </h3>
-      <p className="text-sm text-gray-500 mb-1">{study}</p>
-      <p className="text-sm text-gray-500 mb-1">{marks}</p>
-      <p className="text-sm text-gray-500 mb-1">{place}</p>
-      <p className="text-sm text-gray-500 mb-2">{duration}</p>
+      <h3 className="mb-2 text-wrap text-lg font-semibold">{universityName}</h3>
+      <p className="mb-1 text-sm text-gray-500">{study}</p>
+      <p className="mb-1 text-sm text-gray-500">{marks}</p>
+      <p className="mb-1 text-sm text-gray-500">{place}</p>
+      <p className="mb-2 text-sm text-gray-500">{duration}</p>
     </TimelineAnimation>
   );
 }
@@ -439,32 +455,32 @@ function ProjectCard({
   image,
   description,
   liveDemoUrl,
-  githubUrl
+  githubUrl,
 }: Project) {
   return (
-    <div className="bg-white group rounded-xl border-none p-5 text-left shadow-none transition-all duration-200 ease-linear drop-shadow-md hover:drop-shadow-xl w-full h-[620px] max-w-sm relative flex flex-col">
-      <div className="flex items-start mb-4 flex-shrink-0">
+    <div className="group relative flex h-[620px] w-full max-w-sm flex-col rounded-xl border-none bg-white p-5 text-left shadow-none drop-shadow-md transition-all duration-200 ease-linear hover:drop-shadow-xl">
+      <div className="mb-4 flex flex-shrink-0 items-start">
         <div className="relative">
           <Image
             src={image}
             alt={`${projectName} Image`}
-            className="object-cover rounded-xl"
+            className="rounded-xl object-cover"
             width={500}
             height={500}
-            style={{ objectFit: 'cover' }}
+            style={{ objectFit: "cover" }}
             quality={80}
             priority
           />
         </div>
       </div>
       <div className="flex-1">
-        <h3 className="text-lg font-semibold mb-2 flex items-center">
-          <div className="relative w-12 h-12 mr-2">
+        <h3 className="mb-2 flex items-center text-lg font-semibold">
+          <div className="relative mr-2 h-12 w-12">
             <Image
               src={gif}
               alt={`${projectName} GIF`}
-              className="object-cover rounded-xl"
-              width={50} 
+              className="rounded-xl object-cover"
+              width={50}
               height={50}
               quality={50}
               priority
@@ -472,22 +488,25 @@ function ProjectCard({
           </div>
           {projectName}
         </h3>
-        <p className="text-sm text-gray-500 mb-1 ml-12">{duration}</p>
-        <p className="text-sm text-gray-500 mb-4 ml-12">{description}</p>
-        <div className="flex flex-wrap gap-2 justify-left mb-4 ml-12">
+        <p className="mb-1 ml-12 text-sm text-gray-500">{duration}</p>
+        <p className="mb-4 ml-12 text-sm text-gray-500">{description}</p>
+        <div className="justify-left mb-4 ml-12 flex flex-wrap gap-2">
           {skills.map((skill, index) => (
-            <span key={index} className="bg-white rounded-full px-3 py-1 text-xs font-medium shadow-md">
+            <span
+              key={index}
+              className="rounded-full bg-white px-3 py-1 text-xs font-medium shadow-md"
+            >
               {skill}
             </span>
           ))}
         </div>
       </div>
-      <div className="flex justify-end gap-4 mt-auto">
+      <div className="mt-auto flex justify-end gap-4">
         <a
           href={liveDemoUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="border-black text-black flex justify-center items-center rounded-full shadow-md transition-transform transform hover:scale-105 w-8 h-8"
+          className="flex h-8 w-8 transform items-center justify-center rounded-full border-black text-black shadow-md transition-transform hover:scale-105"
         >
           <FontAwesomeIcon icon={faExternalLinkAlt} className="text-xl" />
         </a>
@@ -495,7 +514,7 @@ function ProjectCard({
           href={githubUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="bg-black text-white flex justify-center items-center rounded-full shadow-md transition-transform transform hover:scale-105 w-8 h-8"
+          className="flex h-8 w-8 transform items-center justify-center rounded-full bg-black text-white shadow-md transition-transform hover:scale-105"
         >
           <FontAwesomeIcon icon={faGithub} className="text-xl" />
         </a>
@@ -503,4 +522,3 @@ function ProjectCard({
     </div>
   );
 }
-
