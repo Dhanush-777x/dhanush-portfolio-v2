@@ -23,7 +23,7 @@ export default function Header() {
 
   return (
     <>
-      <nav className="fixed top-0 left-0 z-10 bg-white bg-opacity-30 backdrop-blur-lg flex w-full select-none pt-6 font-light md:px-28 md:pb-2">
+      <nav className="fixed left-0 top-0 z-10 flex w-full select-none bg-white bg-opacity-30 pt-6 font-light backdrop-blur-lg md:px-28 md:pb-2">
         <div className="container flex items-center justify-between md:justify-between">
           <div
             className={cn(
@@ -31,11 +31,13 @@ export default function Header() {
               goldenSignature.className,
             )}
           >
-            <button onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
-              <img className="h-[32px] my-4" src="/logo.png" alt="logo" />
+            <button
+              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+            >
+              <img className="my-4 h-[32px]" src="/logo.png" alt="logo" />
             </button>
           </div>
-          <div className="md:hidden flex items-center">
+          <div className="flex items-center md:hidden">
             <button
               className="text-3xl"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -43,7 +45,9 @@ export default function Header() {
               ☰
             </button>
           </div>
-          <div className={`nav-links flex gap-x-8 text-xs md:text-base ${isMobileMenuOpen ? 'block' : 'hidden'} md:flex md:gap-x-8`}>
+          <div
+            className={`nav-links flex gap-x-8 text-xs md:text-base ${isMobileMenuOpen ? "block" : "hidden"} md:flex md:gap-x-8`}
+          >
             {links.map((link) => (
               <span
                 key={link}
@@ -57,18 +61,20 @@ export default function Header() {
               href="https://drive.google.com/file/d/1UzYJmxMRyJAcqynXMsoFcAo6NiUGF-rZ/view?usp=sharing"
               target="__blank"
               download
-              className="flex items-center cursor-pointer"
+              className="flex cursor-pointer items-center"
             >
               <span className="mr-2 hidden md:inline">Resume</span>
-              <FontAwesomeIcon icon={faDownload} className="text-lg pb-1" />
+              <FontAwesomeIcon icon={faDownload} className="pb-1 text-lg" />
             </a>
           </div>
         </div>
       </nav>
 
-      <div className={`fixed inset-0 bg-white bg-opacity-90 backdrop-blur-lg flex flex-col items-center justify-center z-20 transition-transform ${isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
+      <div
+        className={`fixed inset-0 z-20 flex flex-col items-center justify-center bg-white bg-opacity-90 backdrop-blur-lg transition-transform ${isMobileMenuOpen ? "translate-x-0" : "translate-x-full"}`}
+      >
         <button
-          className="absolute top-4 right-4 text-3xl"
+          className="absolute right-4 top-4 text-3xl"
           onClick={() => setIsMobileMenuOpen(false)}
         >
           ×
@@ -84,12 +90,12 @@ export default function Header() {
             </span>
           ))}
           <a
-            href="https://drive.google.com/file/d/1UzYJmxMRyJAcqynXMsoFcAo6NiUGF-rZ/view?usp=sharing"
+            href="https://drive.google.com/file/d/1nMYSrsD8o83DPr2FjLDlbCPVBQPxZG2k/view?usp=sharing"
             download
-            className="flex items-center cursor-pointer"
+            className="flex cursor-pointer items-center"
           >
             <span className="">Resume</span>
-            <FontAwesomeIcon icon={faDownload} className="text-lg p-2" />
+            <FontAwesomeIcon icon={faDownload} className="p-2 text-lg" />
           </a>
         </div>
       </div>
